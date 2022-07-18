@@ -1,17 +1,17 @@
 :root{
-    --text-color: #252525;
+    --text: #252525;
     --black: #1b1b1b;
     --gray: #eaeaea;
     --white: #f5f3f3;
-    --main-color: #1a7d5c;
+    --main: #1a7d5c;
+    --main2: #e3efeb;
+    --link: #235fd6;
 }
-
-
 body{
     line-height: 1.7;
     font: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: var(--text-color);
+    font-family: 'Noto Sans JP', 'sans-serif';
+    color: var(--text);
     background: var(--gray);
 }
 main{
@@ -21,7 +21,7 @@ main{
     margin: 30px auto;
     text-align: center;
     border-radius: 40px 3px;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--main);
 }
 footer{
     background: var(--black);
@@ -30,35 +30,43 @@ footer{
     padding-bottom: 10px;
 }
 
-
 /*細かい設定*/
-h1{
-    border-bottom: 4px solid var(--main-color);
-    margin-bottom: 20px;
-}
-
-h2{
-    border-bottom: 2px solid var(--main-color);
+h1,h2{
+    border-bottom: 2px solid var(--main);
     margin-bottom: 10px;
 }
-
 ul {
-  padding: 0;
+  padding: 0 20%;
   position: relative;
 }
 ul li{
-  border: solid var(--main-color);
-  border-width: 0 5px;
-  background: #e3efeb;
+  border: solid var(--main);
+  border-width: 0 0 0 7px;
+  background: var(--main2);
   margin-bottom: 3px;
    line-height: 1.5;
   padding: 0.5em;
   list-style-type: none!important;
 }
-
 img{
     max-width: 100%;
     height: auto;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5%;
+}
+a{color: var(--link)}
+svg {
+    display: inline-block;
+    margin: 0 2%;
+    fill: var(--text);
+  }
+.icon{
+    text-decoration: none;
+}
+/*整える*/
+.blank{margin: 20px 0;}
+
+@media screen and (max-width:750px) {
+    main{width: calc(100% - 5px);}
+    ul{padding: 0;}
 }
